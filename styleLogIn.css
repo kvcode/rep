@@ -28,15 +28,15 @@ body{
 #header-title {
     display: block;
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 24px;
     font-weight: bold;
 }
 #header-nav {
-    display: block;
+    display: block-inline;
     float: right;
     margin-top: 0;
-    margin-right: 20px;
+    margin-right: 5px;
 }
 #header-nav li {
     display: inline;
@@ -107,9 +107,9 @@ h1 {
 
 #signUpButton {
     margin-top: 20px;
-    background-color: #none;
+    background-color: rgb(235, 255, 235);;
     color: black;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 #signUpButton:hover {
