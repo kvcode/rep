@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lexend+Zetta&display=swap');
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+
 html{
     height: 100%
 }
@@ -52,6 +53,8 @@ h1 {
 .container1 {
     margin: 50px auto;
     width: 62%;
+    max-width: 480px;
+    min-width: 400px;
     height: 450px;
     padding: 10px;
     background-color: #1abc9c;
@@ -68,7 +71,8 @@ h1 {
 }
 .inpel {
     font-size: 18px;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     height: 30px;
     padding: 2px;
     margin: 10px auto;
@@ -113,26 +117,25 @@ h1 {
     opacity: 1;
 }
 #chb {
-    float: left;
-    margin: 0 45px;
-    text-decoration-color: #286757;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 15px;
-    border: none;
+    text-align: left;
+    display: inline-flex;
 }
 
 #fgp {
     letter-spacing: 0.01em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 15px;
-    float: right;
-    margin: 0 40px;
-    text-decoration-color: #286757;
+    font-size: 15px;.
+    text-align: right;
+    display: inline-flex;
 }
-
+.rmbfp {
+    
+}
 .footer {
     background-color: #1abc9c;
     padding: 1px;
