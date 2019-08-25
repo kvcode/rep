@@ -8,6 +8,8 @@ html{
 body{
     margin: 0;
     background-color: #e6ffe6;
+    min-width: 400px;
+    width: 100%;
 }
 #header {
     background-color: #1abc9c;
