@@ -9,6 +9,7 @@ html {
 
 body, .customBody {
     overflow-x: hidden;
+    position: relative;
 }
 
 .logo {
