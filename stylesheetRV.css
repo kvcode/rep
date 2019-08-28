@@ -18,7 +18,7 @@ body, .customBody {
 }
 
 .logo img {
-    max-height: 13vh;
+    max-height: 15vh;
     padding: 0px 3px;
 }
 
@@ -26,7 +26,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 13vh;
+    min-height: 15vh;
     font-family: 'Philosopher', sans-serif;
     background-color: #00392a;
 }
@@ -72,17 +72,13 @@ nav {
     }
     nav{
         overflow-x: hidden;
-        justify-content: space-between
+        justify-content: space-between;
     }
-     .logo img{
-         height: 50%;
-         width: auto;
-        }
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 100vh;
-        top: 13vh;
+        height: 65vh;
+        top: 15vh;
         background-color: #00392a;
         display: flex;
         flex-direction: column;
