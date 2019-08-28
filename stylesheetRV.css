@@ -18,7 +18,7 @@ body, .customBody {
 }
 
 .logo img {
-    max-height: 15vh;
+    max-height: 12vh;
     padding: 0px 3px;
 }
 
@@ -26,7 +26,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 15vh;
+    min-height: 12vh;
     font-family: 'Philosopher', sans-serif;
     background-color: #00392a;
 }
@@ -81,7 +81,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 75vh;
-        top: 15vh;
+        top: 12vh;
         background-color: #00392a;
         display: flex;
         flex-direction: column;
