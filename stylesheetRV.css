@@ -7,8 +7,9 @@ html {
     overflow-x: hidden;
 }
 
-body {
+body, .customBody {
     overflow-x: hidden;
+    position: relative;
 }
 
 .logo {
@@ -22,6 +23,7 @@ body {
 }
 
 nav {
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -59,17 +61,18 @@ nav {
     transition: all 0.4s ease;
 }
 @media screen and (max-width:1980px) {
-        .content { 
-            background: url(img/gearsLandscape.png);
+  .content { 
+        background: url(img/gearsLandscape.png);
         }
 }
 
 @media screen and (max-width:820px){
-    body{
-        overflow-x: hidden;
+    html, body, .customBody {
+    overflow-x: hidden;
+    position: relative;
     }
     nav{
-        overflow-x: hidden;
+    overflow-x: hidden;
     }
     .nav-links {
         position: absolute;
