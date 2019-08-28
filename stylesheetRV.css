@@ -9,7 +9,6 @@ html {
 
 body, .customBody {
     overflow-x: hidden;
-    position: relative;
 }
 
 .logo {
@@ -68,7 +67,6 @@ nav {
 @media screen and (max-width:820px){
     html, body, .customBody {
     overflow-x: hidden;
-    position: relative;
     }
     nav{
     overflow-x: hidden;
