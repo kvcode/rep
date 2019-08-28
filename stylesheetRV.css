@@ -195,6 +195,6 @@ h2 {
 }
 .mainImg {
     width: auto;
-    height: 45vh;
+    max-height: 350px;
     padding: 20px 0;
 }
