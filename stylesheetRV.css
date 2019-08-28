@@ -7,7 +7,9 @@
 body {
 
 }
+.gears{
 
+}
 .logo {
     color: white;
     text-transform: uppercase;
@@ -21,7 +23,7 @@ nav {
     align-items: center;
     min-height: 10vh;
     font-family: 'Philosopher', sans-serif;
-    background-color: rgb(20, 0, 60);
+    background-color: #00392a;
 }
 .nav-links {
     display: flex;
@@ -36,7 +38,7 @@ nav {
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
@@ -52,21 +54,26 @@ nav {
     margin: 5px;
     transition: all 0.4s ease;
 }
+@media screen and (max-width:1980px) {
+        .content { 
+            background: url(img/gearsLandscape.png);
+        }
+}
 
 @media screen and (max-width:768px){
     body{
         overflow-x: hidden;
     }
-    .nav-links{
+    .nav-links {
         position: absolute;
         right: 0px;
-        height: 92vh;
+        height: 122vh;
         top: 8vh;
-        background-color: rgb(20, 0, 60);
+        background-color: #00392a;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 40%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
@@ -75,6 +82,17 @@ nav {
     }
     .burger{
         display: block;
+    }
+    .content {
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        background: url(img/gearsPortrait.png);
+    }
+    .content-container {
+        padding-left: 20px;
     }
 }
 
@@ -101,4 +119,66 @@ nav {
 }
 .toggle .line3{
      transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    min-height: 10vh;
+    font-family: 'Spectra', sans-serif;
+    background-color: #00392a;
+    padding: 5px 2px;
+    align-items: top;
+}
+.footer-container {
+    margin: 5px 0;
+}
+h6 {
+    margin-bottom: 8px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+}
+.footer-links li{
+    list-style: none;
+}
+.footer p {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.footer-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    background-color: rgba(226, 255, 253, 0.49);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    justify-content: space-around;
+    min-height: 60vh;
+}
+
+.content-container {
+    font-family: 'Spectra', sans-serif;
+    letter-spacing: 0.1em;
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 18px;
 }
