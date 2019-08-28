@@ -3,13 +3,16 @@
     padding: 0px;
     box-sizing: border-box;
 }
+html {
+    overflow-x: hidden;
+}
 
 body {
-
+    overflow-x: hidden;
 }
 
 .logo {
-  background-color: rgba(248, 255, 254);
+    background-color: rgba(248, 255, 254);
     margin-left: 0vh;
 }
 
