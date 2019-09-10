@@ -78,7 +78,6 @@ nav {
         position: relative;
     }
     .logo {
-        width: 50%;
         display: flex;
         justify-content: center;
         background-color: rgb(244, 254, 255);
