@@ -152,8 +152,9 @@ h1 {
 
 @media screen and (max-width:1980px) {
   .content { 
-        background: url(img/gearsLandscape.png);
-        }
+       background: url(img/gearsLandscape.png);
+       background-color: rgb(244, 254, 255);
+    }
     h1 {
         text-align: center;
     }
