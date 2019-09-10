@@ -81,6 +81,7 @@ nav {
         width: 50%;
         display: flex;
         justify-content: center;
+        background-color: rgba(248, 255, 254);
     }
     nav{
         overflow-x: hidden;
