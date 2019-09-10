@@ -273,9 +273,10 @@ h1 {
         margin: 0 auto;
     }
     .content {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        padding-left: 10px;
+        padding-left: 20px;
         background: url(img/gearsPortrait.png);
         background-color: rgb(244, 254, 255);
         background-repeat: no-repeat;
@@ -289,9 +290,9 @@ h1 {
         font-size: 16px;
     }
     h1 {
-        text-align: left;
+        text-align: center;
         font-size: 22px;
-        padding-left: 10px;
+        padding-left: 20px;
     }
     h2 {
         font-size: 18px;
