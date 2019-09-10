@@ -202,7 +202,7 @@ h1 {
         align-content: space-around;
         background: url(img/gearsPortrait.png);
         align-items: center;
-        padding-left: 80px;
+        padding-left: 50px;
         background-color: rgb(244, 254, 255);
     }
     .content-container ul {
