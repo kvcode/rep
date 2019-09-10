@@ -169,6 +169,7 @@ h1 {
         display: flex;
         justify-content: center;
         background-color: rgb(244, 254, 255);
+        min-width: 50%;
     }
     nav{
         overflow-x: hidden;
