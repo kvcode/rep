@@ -113,9 +113,10 @@ nav {
         align-content: space-around;
         background: url(img/gearsPortrait.png);
         padding-left: 10px;
+        align-items: center;
     }
     h1 {
-        text-align: left;
+        text-align: center;
     }
 }
 
@@ -227,3 +228,4 @@ h1 {
     letter-spacing: 0.2em;
     font-size: 28px;
 }
+
