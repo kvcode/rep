@@ -190,7 +190,7 @@ h1 {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 590px;
+        height: 78.6%;
         top: 80px;
         background-color: #00392a;
         display: flex;
@@ -255,7 +255,7 @@ h1 {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 590px;
+        height: 83%;
         top: 80px;
         background-color: #00392a;
         display: flex;
@@ -273,7 +273,6 @@ h1 {
         margin: 0 auto;
     }
     .content {
-        min-height: 590px;
         display: flex;
         flex-direction: column;
         padding-left: 10px;
