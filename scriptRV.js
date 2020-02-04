@@ -10,7 +10,7 @@ burger.addEventListener('click', () => {
     if (link.style.animation) {
         link.style.animation = '';
     } else {
-        link.style.animation = 'navLinkFade 1.5s ease forwards';
+        link.style.animation = `navLinkFade 0.8s ease forwards ${index / 7 + 0.3}s`;
                 }
          });
      burger.classList.toggle('toggle');
