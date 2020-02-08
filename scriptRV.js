@@ -10,7 +10,7 @@ burger.addEventListener('click', () => {
     if (link.style.animation) {
         link.style.animation = '';
     } else {
-        link.style.animation = `navLinkFade 0.8s ease forwards ${index / 7 + 0.3}s`;
+        link.style.animation = `navLinkFade 1s ease forwards ${index / 6 + 0.4}s`;
                 }
          });
      burger.classList.toggle('toggle');
@@ -58,7 +58,7 @@ const navBtnUpdate = () => {
         if (link.style.animation) {
             link.style.animation = '';
         } else {
-            link.style.animation = `navLinkFade 0.8s ease forwards ${index / 7 + 0.3}s`;
+            link.style.animation = `navLinkFade 1s ease forwards ${index / 6 + 0.4}s`;
                     }
              });
          burger.classList.toggle('toggle');
