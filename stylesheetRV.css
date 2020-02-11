@@ -136,6 +136,7 @@ h6 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    padding-top: 30px;
 }
 .content {
     display: flex;
@@ -170,15 +171,85 @@ h2{
 h1 {
     display: block;
     padding-left: 5px;
-    padding-top: 50px;
+    padding-top: 20px;
     font-weight: bolder;
     color: black;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-size: 28px;
+    text-align: center;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+h3 {
+    display: block;
+    padding-left: 5px;
+    padding-top: 40px;
+    font-weight: bolder;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 28px;
+    text-align: center;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+/* -----------Za Nas ----------*/
+.zaNasImg {
+    margin-top: 50px;
+    width: 500px;
+    padding-right: 20px;
+}
+
+.pZaNas {
+    padding: 20px 40px;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* ---------- Kontakti ------- */
+
+#map {
+    margin-top: 35px;
+    max-height: 450px;
+    max-width: 550px;
 }
 
 
+
+.list-kontakti {
+    list-style: none;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+    padding-top: 15px;
+}
+.list-kontakti li {
+    padding-top: 10px;
+}
+
+.list-kontakti a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.list-kontakti a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.list-kontakti a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.list-kontakti a:link {
+    text-decoration: active;
+    color: black;
+}
 
 /* ---------- MEDIA QUERIES ------- */
 
@@ -191,11 +262,6 @@ h1 {
        max-width: 1366px;
        margin: 0 auto;
        height: 1040px;
-    }
-    h1 {
-        text-align: center;
-        max-width: 1366px;
-        margin: 0 auto;
     }
 }
 
@@ -252,7 +318,7 @@ h1 {
         padding-bottom: 10px;
         font-size: 12px;
     }
-    h1 {
+    h1, h3 {
         text-align: center;
         font-size: 22px;
     }
@@ -311,7 +377,7 @@ h1 {
     }
 
     .nav-mobile-space {
-        height: 40px;
+        height: 25px;
     }
     .burger{
         display: block;
@@ -333,7 +399,7 @@ h1 {
         padding-bottom: 10px;
         font-size: 14px;
     }
-    h1 {
+    h1, h3 {
         text-align: center;
         font-size: 21px;
         padding-left: 20px;
@@ -342,7 +408,7 @@ h1 {
         font-size: 16px;
     }
     .mainImg {
-    max-width: 270px;
+        max-width: 300px;
     }
     .navBtn-active {
         width: 100vw;
@@ -362,7 +428,25 @@ h1 {
         padding: 0;
         border: 0;
     }
+    #map {
+        max-height: 350px;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+    .pZaNas {
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.2;
+        text-align: justify;
+        padding-bottom: 0;
+    }
+    .zaNasImg {
+        max-width: 300px;
+        margin-top: 0;
+        padding-bottom: 60px;
+    }
 }
+
 .nav-active{
     transform: translateX(0%);
 }
