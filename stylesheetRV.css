@@ -2,14 +2,25 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
 }
+
 html {
+    position: fixed;
+    height: 100%;
     overflow-x: hidden;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
 }
 
 body, .customBody {
     overflow-x: hidden;
     position: relative;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .logo {
@@ -28,6 +39,8 @@ body, .customBody {
 .nabc {
     height: 60px;
     background-color: #00392a;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
 }
 
 nav {
@@ -90,6 +103,8 @@ nav {
 .fobc {
     height: 80px;
     background-color: #00392a;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
 }
 .footer {
     display: flex;
@@ -137,6 +152,8 @@ h6 {
     background-position: center;
     background-size: contain;
     padding-top: 30px;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
 }
 .content {
     display: flex;
