@@ -1,0 +1,494 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+}
+
+html {
+    position: fixed;
+    height: 100%;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+}
+
+body, .customBody {
+    overflow-x: hidden;
+    position: relative;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.logo {
+    background-color: rgb(244, 254, 255);
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+
+.logo img {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    padding: 0px 3px;
+}
+.nabc {
+    height: 60px;
+    background-color: #00392a;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.nav-links li{
+    list-style: none;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.4s ease;
+}
+
+/* ---------- NAV button ------- */
+.zaNas, .uslugi, .kontakti, .zn, .us, .ko {
+    background-color:  #00392a /* Green */;
+    height: 60px;
+    padding: 0 25px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.zaNas, .uslugi, .kontakti {
+    display: none;
+}
+
+.navBtn-active {
+    background-color: rgb(244, 254, 255);
+    color: #00392a;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ---------- Foooter ------- */
+.fobc {
+    height: 80px;
+    background-color: #00392a;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Spectra', sans-serif;
+    padding: 5px;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+.footer-container {
+    margin: 5px 0;
+}
+h6 {
+    margin-bottom: 6px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+}
+.footer-links li{
+    list-style: none;
+}
+.footer p {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: 7px;
+    text-transform: capitalize;
+}
+
+.footer-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+/* ---------- Content ------- */
+
+.contbc {
+    background-color: rgb(244, 254, 255);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-top: 30px;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: none;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    min-height: 720px;
+    padding-top: 20px;
+}
+
+.content-container {
+    font-family: 'Spectra', sans-serif;
+    letter-spacing: 0.1em;
+}
+.content-container ul {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+h2{
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+}
+
+.mainImg {
+    max-width: 350px;
+    padding-bottom: 20px;
+}
+h1 {
+    display: block;
+    padding-left: 5px;
+    padding-top: 20px;
+    font-weight: bolder;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 28px;
+    text-align: center;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+h3 {
+    display: block;
+    padding-left: 5px;
+    padding-top: 40px;
+    font-weight: bolder;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 28px;
+    text-align: center;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+/* -----------Za Nas ----------*/
+.zaNasImg {
+    margin-top: 50px;
+    width: 500px;
+    padding-right: 20px;
+}
+
+.pZaNas {
+    padding: 20px 40px;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+/* ---------- Kontakti ------- */
+
+#map {
+    margin-top: 35px;
+    max-height: 450px;
+    max-width: 550px;
+}
+
+
+
+.list-kontakti {
+    list-style: none;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+    padding-top: 15px;
+}
+.list-kontakti li {
+    padding-top: 10px;
+}
+
+.list-kontakti a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.list-kontakti a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.list-kontakti a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.list-kontakti a:link {
+    text-decoration: active;
+    color: black;
+}
+
+/* ---------- MEDIA QUERIES ------- */
+
+@media screen and (min-width:1024px) {
+    body {
+        display: block;
+        margin: 0 auto;
+    }
+  .content { 
+       max-width: 1366px;
+       margin: 0 auto;
+       height: 1040px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    html, body, .customBody {
+        overflow-x: hidden;
+        position: relative;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(244, 254, 255);
+        min-width: 55%;
+    }
+    nav{
+        overflow-x: hidden;
+        justify-content: space-between;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        height: 599px;
+        background-color: #00392a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 45%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        padding-top: 50px;
+        opacity: 0;
+    }
+    
+    .burger{
+        display: block;
+        margin: 0 auto;
+    }
+    .content {
+        display: flex;
+        padding-left: 10px;
+        background-color: rgb(244, 254, 255);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        min-height: 524px;
+    
+    }
+    .content-container ul {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 12px;
+    }
+    h1, h3 {
+        text-align: center;
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    .mainImg {
+    max-width: 300px;
+    }
+    .navBtn-active {
+        width: 43vw;
+    }
+    .zn, .us, .ko {
+        display: none;
+    }
+    .zaNas, .uslugi, .kontakti{
+        display: block;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+@media screen and (max-width:580px){
+    html, body, .customBody {
+        overflow-x: hidden;
+        position: relative;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(244, 254, 255);
+        min-width: 55%;
+    }
+    nav{
+        overflow-x: hidden;
+        justify-content: space-between;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        background-color: #00392a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 340px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        padding-top: 5px;
+        opacity: 0;
+    }
+
+    .nav-mobile-space {
+        height: 25px;
+    }
+    .burger{
+        display: block;
+        margin: 0 auto;
+    }
+    .content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        background-color: rgb(244, 254, 255);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    
+    }
+    .content-container ul {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+    h1, h3 {
+        text-align: center;
+        font-size: 21px;
+        padding-left: 20px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .mainImg {
+        max-width: 300px;
+    }
+    .navBtn-active {
+        width: 100vw;
+    }
+    .zaNas, .uslugi, .kontakti{
+        display: block;
+    }
+    .zn, .us, .ko {
+        display: none !important;
+        visibility: hidden;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
+    #map {
+        max-height: 350px;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+    .pZaNas {
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.2;
+        text-align: justify;
+        padding-bottom: 0;
+    }
+    .zaNasImg {
+        max-width: 300px;
+        margin-top: 0;
+        padding-bottom: 60px;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+     transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.cc2-inactive{
+    display: none;
+}

@@ -1,44 +1,128 @@
 <!DOCTYPE html>
-<html>
-    <head>
-  <title>LOG IN</title>
-  <link rel="stylesheet" type="text/css" href="styleLogIn.css">
-    </head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
-<div id="header">
-        <div class="container">
-            <a id="header-title" href="index.html">My Blog</a>
-            <ul id="header-nav">
-            <li><a href="./rps/index.html">Game1</a></li>
-            <li><a href="./zarcheta/index.html">Game2</a></li>
-            <li><a href="./budgety/index.html">Budgety</a></li>
-            <li><a href="./forkify/dist/index.html">Forkify</a></li>
-            <li><a href="mailto:im14@abv.bg">Contacts</a></li>
-            </ul>
-        </div>
-    </div>
-       <div class="container2"></div>
-    <div class="container1">
-     <div class="heading">
-        <h1>PLEASE LOG IN</h1>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/2fe00f348c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Kristian Krusev</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark navbar-dark">
+      <div class="container">
+        <a href="" class="navbar-brand"
+          ><i class="fas fa-burn mr-2"></i>KVCode</a
+        >
       </div>
-      <div class="panel">
-  <input class="inpel" type="text" placeholder="Username" id="usn"><br>
-  <input class="inpel" type="password" placeholder="Password" id="psw"><br>
-  <div class="rmbfp">
-      <input id="chb" type="checkbox"><span id="rm"><a href="indexPushC.html">Remember me</a></span>
-      <a href="indexRV.html" id="fgp">Forgotten password?</a></div>
-        <br><br><br>
-      <div class="button">
-<button class="button" id="loginButton" onclick="loging()">LOG IN</button>
-<a href="./weatherApp/index.html"><button class="button" id="signUpButton" onclick="JSFunction">SIGN UP</button></a> 
+    </nav>
+
+    <style>
+      html {
+        height: 100%;
+      }
+      footer {
+        height: 25vh;
+      }
+      .jumbotron {
+        background: url("./imgs/header.jpg");
+      }
+    </style>
+
+    <div class="jumbotron text-center">
+      <h2 class="">Hello, my name is Kristian Krusev</h2><br>
+      <p class="lead">
+        I am a Front-End developer specialized in HTML5, CSS3, Javascript(ES6).
+        <br>Feel free to check out my latest projects below.
+      </p>
+      <br>
+      <a href="" class="btn btn-primary">Something New</a>
+      <a href="" class="btn btn-secondary">Old Days</a>
+    </div>
+
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-4 d-flex justify-content-center">
+          <div class="card mt-4 " style="width: 18rem;">
+             <a href="https://kvcode.github.io/rep/forkify/dist/index.html"><img src="./imgs/pattern1.jpg" class="card-img-top" /></a>
+          
+            <div class="card-body">
+              <a href="https://kvcode.github.io/rep/forkify/dist/index.html"><h5 class="card-title">Forkify</h5></a>
+              <p class="card-text">
+                Find recipes, create shopping list, save your favorites.
+              </p>
+              <a href="#" class="btn btn-outline-success btn-sm">Resources</a>
+              <a href="#" class="btn btn-outline-danger btn-sm"
+                ><i class="far fa-heart"></i
+              ></a>
             </div>
           </div>
         </div>
-    <div class="footer"><a href="weatherAppOW/index.html"><h3>Copyright Information ©</h3></a>
-  </div>
-  <script type="text/javascript" src="scriptBlog.js"></script>  
-</body>
+
+        <div class="col-lg-4 d-flex justify-content-center">
+          <div class="card mt-4" style="width: 18rem;">
+            <a href="https://kvcode.github.io/rep/budgety/index.html"><img src="./imgs/pattern2.JPG" class="card-img-top" /></a>
+            <div class="card-body">
+              <a href="https://kvcode.github.io/rep/budgety/index.html"><h5 class="card-title">Budgety App</h5></a>
+              <p class="card-text">
+                Can you afford it? Budgety App will answer quickly and efficiently.
+              </p>
+              <a href="#" class="btn btn-outline-success btn-sm">Resources</a>
+              <a href="#" class="btn btn-outline-danger btn-sm"
+                ><i class="far fa-heart"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-flex justify-content-center">
+          <div class="card mt-4" style="width: 18rem;">
+             <a href="https://kvcode.github.io/rep/zarcheta/index.html"><img src="./imgs/pattern3.jpg" class="card-img-top" /></a>
+            <div class="card-body">
+               <a href="https://kvcode.github.io/rep/zarcheta/index.html"><h5 class="card-title">Roll 'em dice</h5></a>
+              <p class="card-text">
+                A game thats both, fun and easy to play. Don't roll a one though.
+              </p>
+              <a href="#" class="btn btn-outline-success btn-sm">Resources</a>
+              <a href="#" class="btn btn-outline-danger btn-sm"
+                ><i class="far fa-heart"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
