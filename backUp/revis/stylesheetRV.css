@@ -7,7 +7,6 @@
 }
 
 html {
-    position: fixed;
     height: 100%;
     overflow-x: hidden;
     overscroll-behavior: none;
@@ -285,7 +284,7 @@ h3 {
 @media screen and (max-width:1024px){
     html, body, .customBody {
         overflow-x: hidden;
-        position: relative;
+  
     }
     .logo {
         display: flex;
@@ -330,6 +329,7 @@ h3 {
         min-height: 524px;
     
     }
+
     .content-container ul {
         padding-left: 10px;
         padding-bottom: 10px;
@@ -354,6 +354,7 @@ h3 {
     .zaNas, .uslugi, .kontakti{
         display: block;
     }
+
 }
 .nav-active{
     transform: translateX(0%);
@@ -401,15 +402,11 @@ h3 {
         margin: 0 auto;
     }
     .content {
-        align-items: center;
         display: flex;
         flex-direction: column;
-        padding-left: 20px;
+        align-items: center;
         background-color: rgb(244, 254, 255);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    
+
     }
     .content-container ul {
         padding-left: 10px;
@@ -458,9 +455,10 @@ h3 {
         padding-bottom: 0;
     }
     .zaNasImg {
-        max-width: 300px;
-        margin-top: 0;
-        padding-bottom: 60px;
+        margin: 0 auto;
+        align-items: center;
+        max-width: 100px;
+        padding-top: 80px;
     }
 }
 
