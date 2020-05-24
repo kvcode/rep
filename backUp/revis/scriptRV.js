@@ -64,7 +64,7 @@ const navBtnUpdate = () => {
           </ul>
         </div>    
         <div id="zaNasHale">
-          <img class="zaNasImg" src="https://raw.githubusercontent.com/kvcode/rep/master/img/RevisHale.jpg">
+          <img class="zaNasImg" src="./img/RevisHale.jpg">
         </div>
         </div>`;
 
@@ -90,7 +90,7 @@ const navBtnUpdate = () => {
                   <li>Бобинажни услуги</li>
                   <li>Трансформатори</li>
               </ul>
-              <img class= "mainImg" src="https://raw.githubusercontent.com/kvcode/rep/master/img/motoRV.jpg">
+              <img class= "mainImg" src="./img/motoRV.jpg">
             </div>    
             <div class="content-container cc2">
             <h2>Ремонт на:</h2>
@@ -100,7 +100,7 @@ const navBtnUpdate = () => {
                   <li>Вентилатори</li>
                   <li>Професионална, битова <br>и градинска техника</li>
               </ul>
-        <img class="mainImg"  src="https://raw.githubusercontent.com/kvcode/rep/master/img/dvigatelRV.jpg">
+        <img class="mainImg"  src="./img/dvigatelRV.jpg">
           </div>
         </div>`
 
