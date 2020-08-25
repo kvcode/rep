@@ -145,6 +145,8 @@ h1 {
     margin: 10px auto;
     opacity: 0.8;
     transition: 0.3s;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 .inpel:hover {
     opacity: 1;
