@@ -2,24 +2,21 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: none;
 }
 
 html {
     height: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     overscroll-behavior: none;
-    -webkit-overflow-scrolling: none;
+    -webkit-overflow-scrolling: none; */
 }
 
-body, .customBody {
+body {
     overflow-x: hidden;
     position: relative;
     overscroll-behavior: none;
     -webkit-overflow-scrolling: none;
     overflow-y: auto;
-    height: 100vh;
 }
 
 .logo {
@@ -281,18 +278,14 @@ h3 {
     }
 }
 
-@media screen and (max-width:1024px){
-    html, body, .customBody {
-        overflow-x: hidden;
-  
-    }
+@media screen and (max-width:880px){
     .logo {
         display: flex;
         justify-content: center;
         background-color: rgb(244, 254, 255);
         min-width: 55%;
     }
-    nav{
+    nav {
         overflow-x: hidden;
         justify-content: space-between;
     }
@@ -319,15 +312,12 @@ h3 {
         display: block;
         margin: 0 auto;
     }
+
     .content {
         display: flex;
-        padding-left: 10px;
+        flex-direction: column;
+        align-items: center;
         background-color: rgb(244, 254, 255);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        min-height: 524px;
-    
     }
 
     .content-container ul {
@@ -343,7 +333,23 @@ h3 {
         font-size: 14px;
     }
     .mainImg {
-    max-width: 300px;
+        width: 90vw;
+        max-width: 780px;
+    }
+
+    .zaNasImg {
+        margin: 0 auto;
+        align-items: center;
+        width: 90vw;
+        max-width: 780px;
+        padding: 20px 10px;
+    }
+
+    #map {
+        max-height: 350px;
+        width: 90vw;
+        max-width: 780px;
+        margin-top: 20px;
     }
     .navBtn-active {
         width: 43vw;
@@ -361,17 +367,14 @@ h3 {
 }
 
 @media screen and (max-width:580px){
-    html, body, .customBody {
-        overflow-x: hidden;
-        position: relative;
-    }
     .logo {
         display: flex;
         justify-content: center;
         background-color: rgb(244, 254, 255);
         min-width: 55%;
     }
-    nav{
+
+    nav {
         overflow-x: hidden;
         justify-content: space-between;
     }
@@ -394,36 +397,19 @@ h3 {
         opacity: 0;
     }
 
-    .nav-mobile-space {
-        height: 25px;
-    }
     .burger{
         display: block;
         margin: 0 auto;
     }
+
+
     .content {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: rgb(244, 254, 255);
+    }
 
-    }
-    .content-container ul {
-        padding-left: 10px;
-        padding-bottom: 10px;
-        font-size: 14px;
-    }
-    h1, h3 {
-        text-align: center;
-        font-size: 21px;
-        padding-left: 20px;
-    }
-    h2 {
-        font-size: 16px;
-    }
-    .mainImg {
-        max-width: 300px;
-    }
     .navBtn-active {
         width: 100vw;
     }
@@ -442,23 +428,31 @@ h3 {
         padding: 0;
         border: 0;
     }
-    #map {
-        max-height: 350px;
-        max-width: 300px;
-        margin-top: 20px;
-    }
+
     .pZaNas {
         font-size: 16px;
         font-family: 'Times New Roman', Times, serif;
-        line-height: 1.2;
-        text-align: justify;
-        padding-bottom: 0;
+        line-height: 1.1;
     }
+
+    .mainImg {
+        width: 90vw;
+        max-width: 480px;
+    }
+
     .zaNasImg {
         margin: 0 auto;
         align-items: center;
-        max-width: 100px;
-        padding-top: 80px;
+        width: 90vw;
+        max-width: 480px;
+        padding: 20px 10px;
+    }
+
+    #map {
+        max-height: 350px;
+        width: 90vw;
+        max-width: 480px;
+        margin-top: 20px;
     }
 }
 
