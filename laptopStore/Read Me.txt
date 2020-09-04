@@ -1,0 +1,17 @@
+In order to run this app you need to have node.js
+already installed on your computer.
+
+// SMALL BACKEND APP CODED ON NODE.JS //
+
+1. Download the files to your computer.
+
+2a. If you are using VSCode open the entire folder:
+ - "FILE>OPEN FOLDER>laptopStore"
+ - Open a new terminal "TERMINAL>NEW TERMINAL"
+ - Type "node index.js"
+
+2b. With terminal(cmd) navigate to the folder 
+and type "node index.js" to run the localserver.
+
+
+3. With a browser go to http://127.0.0.1:1337/
