@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <header class="header">
+      <div class="logo-text">
+        <h3>kvCode</h3>
+      </div>
+      <nav class="navbar">
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+      <!-- header -->
+    </header>
+
+<div id="panel" class="ctr">
+
+    <!-- Log In Panel -->
+      <div class="logInPanel" :style="{display: dspLogInValue}">
+        <div class="imgIcon">
+          <img class="mainImg" src="./img/icon1.png">
+        </div>
+        <h1> Log  in  to  your  account </h1>
+          <p class="">Username :</p>
+          <input class="" type="text" v-model="name">
+          <p class="">Password :</p>
+          <input class="" type="password" v-model="psw">
+     
+        <div class="btn-container">
+          <button @click="logIn" class="btn main">Log In</button>
+          <button @click="signUp" class="btn signUp">Sign Up</button>
+        </div>
+    </div>
+
+
+    <!-- Sign Up Panel -->
+    <div class="signUpPanel" :style="{display: dspSignUpValue}">
+      <h1> Register new account </h1>
+        <p class="">Username :</p>
+        <input class="" type="text" v-model="newUser">
+        <p class="">Email :</p>
+        <input class="" type="email" v-model="newEmail">
+        <p class="">Password :</p>
+        <input class="" type="password" v-model="newPswA">
+        <p class="">Repeat password :</p>
+        <input class="" type="password" v-model="newPswB">
+        <p class="">Full Name :</p>
+        <input class="" type="text" v-model="newFullName">
+        <p class="">Date of birth :</p>
+        <input class="" type="date" v-model="newBirthDay">
+      <button @click="newAccount" class="btn main submitBtn">Submit</button>
+  </div>
+
+
+
+<!-- Logged In Panel  -->
+  <div class="loggedInPanel" :style="{display: dspLoggedInValue}">
+      <div class="imgIcon">
+        <img class="mainImg" src="./img/icon2.png">
+      </div>
+      <h1> {{ name }}, you have successfully logged in! </h1>
+      <ul>
+        <li><strong>Username:  </strong> {{ newUser }}</li>
+        <li><strong>Email: </strong> {{ newEmail }}</li>
+        <li><strong>Full Name:  </strong> {{ newFullName }}</li>
+        <li><strong>Birthday:  </strong> {{ newBirthDay }}</li>
+      </ul>
+      <div class="btn-container">
+        <button @click="logIn" class="btn main">Log OUT</button>
+      </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <h5>Further details :</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</footer>
+    <script src="app.js"></script>
+</body>
+</html>
