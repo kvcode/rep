@@ -35,8 +35,7 @@ new Vue ({
             && (vm.name != '') && (vm.psw != '')) {
                 this.dspLogInValue = 'none';
                 this.dspSignUpValue = 'none';
-                console.log('login clicked')
-                alert('You have successfully logged in!')
+                // console.log('login clicked')
                 this.dspLoggedInValue = 'flex';
             } else {
                 alert('wrong credentials')
