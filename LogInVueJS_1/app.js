@@ -40,13 +40,14 @@ new Vue ({
         },
 
         newAccount: function () {
-                alert('Your account was created. You can log in now.');
-                this.dspLogInValue = 'flex';
-                this.dspSignUpValue = 'none';
-        }
+            alert('Your account was created. You can log in now.');
+            this.dspLogInValue = 'flex';
+            this.dspSignUpValue = 'none';
+        },
 
-        // logOut: function () {
-            
-        // }
+        logOut: function () {
+            this.dspLogInValue = 'flex';
+            this.dspLoggedInValue = 'none';
+        }
     }
 });

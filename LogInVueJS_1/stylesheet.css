@@ -7,19 +7,19 @@
 body {
     position: relative;
     height: 100vh;
-    min-height: 620px;
+    min-height: 45rem;
     background-color: rgb(240, 240, 240);
     font-family: 'Gayathri', sans-serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     background-color: white;
-    min-height: 60px;
-    height: 8vh;
+    min-height: 3.5rem;
+    height: 6vh;
     width: 100vw;
     box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25);
 }
@@ -40,17 +40,19 @@ h3 {
     width: 12%;
 }
 
+.burger {
+    margin-top: 2.4vh;
+}
+
 .line {
-    margin-top: 7px;
+    margin-top: 0.35rem;
     transform: translateX(-50%);
     background-color: rgb(32, 32, 32);
     width: 30px;
     height: 3px;
+    border-radius: 2px;
 }
 
-.burger {
-    margin-top: 2.4vh;
-}
 
 /* ////MAIN PANEL ELEMENT  //// */
 .ctr {
@@ -58,15 +60,15 @@ h3 {
     top: 48%;
     left: 50%;
     width: 90vw;
-    max-width: 600px;
-    min-height: 200px;
+    max-width: 35rem;
+    min-height: 12rem;
     transform: translate(-50%, -50%);
     background-color: white;
 }
 
 .imgIcon {
     /* background-color: rgb(255, 33, 33); */
-    margin-top: 4vh;
+    margin-top: 2vh;
     margin-left: 50%;
     transform: translateX(-50%);
     width: 8vh;
@@ -75,18 +77,20 @@ h3 {
 .mainImg {
     margin-left: 50%;
     width: 8vh;
-    max-height: 180px;
-    min-height: 60px;
-    min-width: 60px;
+    max-height: 12rem;
+    min-height: 5rem;
+    min-width: 5rem;
     transform: translateX(-50%);
 
 }
+
+
 
 /*//// SIGN UP PANEL //////*/
 .logInPanel h1, .signUpPanel h1, .loggedInPanel h1 {
     margin: 2% 0;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     line-height: 1.4;
@@ -94,19 +98,22 @@ h3 {
 
 .signUpPanel h1 {
     line-height: 1.2;
+    margin-top: 3vh;
+
 }
 
 .loggedInPanel h1{
-    font-size: 1rem;
+    font-size: 1.3rem;
     letter-spacing: 0.1em;
     line-height: 1.2; 
 }
 
-/* ///Panels Settings/// */
 
+
+/* ///Panels Settings/// */
 .logInPanel, .signUpPanel, .loggedInPanel {
     background-color: #fff;
-    padding: 10px;
+    padding: 0.6rem;
     position: absolute;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -116,8 +123,9 @@ h3 {
 }
 
 .loggedInPanel {
-    margin-top: 40%;
-    min-height: 400px;
+    top: 60%;
+    padding-top: 6vh;
+    min-height: 35rem;
     display: none;   
 }
 
@@ -134,36 +142,40 @@ h3 {
 }
 
 .logInPanel input {
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     width: 100%;
-    padding: 8px 16px;
-    font-size: 1rem;
+    padding: .5rem 1rem;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    transform: scaleY(1.1);
-    letter-spacing: 0.1em;
+    font-size: 100%;
+    font-weight: 400;
+    letter-spacing: .1em;
 }
 
 .logInPanel p {
-    margin-left: 3%;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    font-size: 1rem;
     margin-top: 4vh;
-
+    margin-left: 2%;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: .06em;
 }
 
 .logInPanel input:focus {
    border: 2px solid rgba(0, 179, 0, 0.699);
+   outline: none;
+}
+
+p {
+    line-height: 1.2;
 }
 
 
-/* fields for SignUp Panel */
+
+/*/// inputFields for SignUp Panel/// */
 .signUpPanel input {
     border: 1px solid lightgray;
     width: 100%;
     padding: 6px 10px;
-    font-size: 0.8rem;
+    font-size: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     letter-spacing: 0.05em;
@@ -172,14 +184,15 @@ h3 {
 .signUpPanel p {
     margin-left: 2%;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: .06em;
     font-size: 0.8rem;
-    margin-top: 1.5vh;
-
+    margin-top: 1.6vh;
 }
 
 .signUpPanel input:focus {
-   border: 1px solid rgba(0, 179, 0, 0.699);
+   border: 2px solid rgba(0, 179, 0, 0.699);
+   outline: none;
+
 }
 
 /* loggED IN PANEL //  */
@@ -187,10 +200,9 @@ h3 {
     margin-top: 4vh;
     padding-left: 4vw;
     list-style: none;
-    font-size: 0.8rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.05em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
 }
 
 
@@ -237,8 +249,8 @@ h3 {
 }
 
 .submitBtn {
-    width: 80%;
-    padding: 8px;
+    width: 75%;
+    padding: 0.8rem;
 }
 
 
@@ -249,8 +261,8 @@ footer {
     padding: 10px;
     background-color: white;
     width: 100%;
-    height: 10vh;
-    min-height: 50px;
+    /* height: 8vh; */
+    transform: translateY(-100%);
     text-align: center;
     color: rgb(32, 32, 32);
     box-shadow: 0px -5px 10px 0px rgba(83,83,83,0.25);
