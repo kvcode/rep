@@ -1,4 +1,5 @@
 console.log('file Loaded')
+// console.log(document.event.target)
 
 new Vue ({
     el: '#panel',
@@ -15,6 +16,9 @@ new Vue ({
         dspLogInValue: '',
         dspSignUpValue: '',
         dspLoggedInValue: '',
+        navBackground: 'prpl',
+        isActive: false,
+        indexZ: -1,
     },
 
     methods: {
@@ -48,6 +52,27 @@ new Vue ({
         logOut: function () {
             this.dspLogInValue = 'flex';
             this.dspLoggedInValue = 'none';
+        },
+
+        toggleNav: function () {
+            console.log('navclicked');
+            // this.isActive = !this.isActive;
+            // console.log(this.indexZ);
+           
+            if (this.isActive === false) {
+                this.isActive = true;
+                this.indexZ = -1;
+            } else if (this.isActive === true) {
+                const vt = this;
+                setTimeout(function () {
+                    vt.indexZ = 1;
+                    console.log(this.indexZ);
+                    }, 400);
+                this.isActive = false;
+            } else {
+                alert('error Z index')
+            }
+            // console.log(this.isActive);
         }
     }
 });

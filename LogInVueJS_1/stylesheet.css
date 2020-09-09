@@ -8,13 +8,134 @@ body {
     position: relative;
     height: 100vh;
     min-height: 45rem;
-    background-color: rgb(240, 240, 240);
+    /* background-color: rgb(240, 240, 240); */
     font-family: 'Gayathri', sans-serif;
     font-weight: 700;
     font-size: 1rem;
 }
 
-.header {
+/* ////// NAV ///// */
+nav {
+    margin: 0;
+    overflow: hidden;
+    /* background: #ff0000; */
+    box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25);
+    z-index: 1;
+}   
+
+.nav-content {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-content a {
+    display: block;
+    line-height: 4rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: #000000;
+}
+
+.nav-content a:hover,
+.nav-icon:hover,
+.search-icon:hover {
+    opacity: 0.7;
+}
+
+.nav-links {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-icon {
+    display: none;
+    padding: 1.1rem 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bar {
+    margin-top: 6px;
+    height: 2px;
+    width: 20px;
+    background: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+.search-icon {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        height: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all .8s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .show .nav-links {
+        height: 100%;
+    }
+
+    .nav-links a {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        margin-right: 3rem;
+        margin-left: 3rem;
+        transition: opacity 1.5s, height 2s;
+    }
+        
+    .show .nav-links a {
+        opacity: 1;
+        width: auto;
+        height: auto;
+    }
+   
+    .nav-icon {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        height: 64px;
+    }
+
+    .logo {
+        order: 2;
+        font-size: 1.4rem;
+    }
+
+    .search-icon {
+        order: 3;
+    }
+
+}
+
+.show .one {
+    transform: rotate(45deg) translateY(5.5px);
+}
+
+.show .two {
+    transform: rotate(-45deg) translateY(-5.5px);
+}
+
+
+/* OLD NAV */
+
+/* .header {
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -51,11 +172,12 @@ h3 {
     width: 30px;
     height: 3px;
     border-radius: 2px;
-}
+} */
 
 
 /* ////MAIN PANEL ELEMENT  //// */
 .ctr {
+    /* display: none; */
     position: absolute;
     top: 48%;
     left: 50%;
