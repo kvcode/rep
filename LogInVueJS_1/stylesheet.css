@@ -8,7 +8,7 @@ body {
     position: relative;
     height: 100vh;
     min-height: 45rem;
-    /* background-color: rgb(240, 240, 240); */
+    background-color: rgb(240, 240, 240);
     font-family: 'Gayathri', sans-serif;
     font-weight: 700;
     font-size: 1rem;
@@ -18,7 +18,7 @@ body {
 nav {
     margin: 0;
     overflow: hidden;
-    /* background: #ff0000; */
+    background-color: #ffffff;
     box-shadow: 0 5px 10px rgba(83, 83, 83, 0.25);
     z-index: 1;
 }   
