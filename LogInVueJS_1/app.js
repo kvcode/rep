@@ -18,7 +18,7 @@ new Vue ({
         dspLoggedInValue: '',
         navBackground: 'prpl',
         isActive: false,
-        indexZ: -1,
+        indexZ: 1,
     },
 
     methods: {
