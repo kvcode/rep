@@ -258,8 +258,7 @@ h3 {
 }
 
 .signUpPanel {
-    top: 70%;
-    line-height: 2.5vh;
+    top: 60%;
     display: none;
 }
 
@@ -308,7 +307,7 @@ p {
     font-weight: 600;
     letter-spacing: .06em;
     font-size: 0.8rem;
-    margin-top: 1.6vh;
+    margin-top: 1.4vh;
 }
 
 .signUpPanel input:focus {
@@ -334,7 +333,7 @@ p {
 }
 
 .btn {
-    margin: 12% auto;
+    margin: 10% auto;
     padding: 12px 0px;
     border-radius: 4px;
     cursor: pointer;
