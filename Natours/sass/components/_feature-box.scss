@@ -17,7 +17,7 @@
         $color-primary-light, 
         $color-primary-dark
         );
-        // -webkit-background-clip: text;
+        -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
     }
@@ -26,7 +26,4 @@
         transform: translateY(-1.5rem) scale(1.05);
     }
 
-    // &__text {
-
-    // }
 }

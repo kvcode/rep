@@ -64,5 +64,16 @@
         "screen": "14-inch, Full HD",
         "price": "850",
         "description": "The Samsung Notebook 7 is still one of the best budget laptops you can buy in 2018. Packed with more horsepower than some MacBook Pros,but at a much lower price, Samsung has crafted a laptop that has just as much substance as it does style. Plus, on top of its killer specs, it’s lightweight and thin, making this one of the most portable 15-inch laptops you can buy today."
+    },
+    {
+        "id": "6",
+        "productName": "APPLE MAC AIR",
+        "image": "samsung-notebook-9.jpg",
+        "cpu": "Intel Core i3, 6th generation",
+        "ram": "8GB",
+        "storage": "128 GB SSD",
+        "screen": "14-inch, Full HD",
+        "price": "850",
+        "description": "Packed with more horsepower than some MacBook Pros,but at a much lower price, Samsung has crafted a laptop that has just as much substance as it does style. Plus, on top of its killer specs, it’s lightweight and thin, making this one of the most portable 15-inch laptops you can buy today."
     }
 ]
