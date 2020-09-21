@@ -44,20 +44,78 @@
       footer {
         height: 25vh;
       }
-      .jumbotron {
+      .heading {
         background: url("./imgs/headerNew.jpg");
+        padding: 40px 10px;
+      }
+      .heading__primary {
+        display: flex;
+        justify-content: space-around;
+        text-align-last: center;
+      }
+      .heading__primary--text {
+        width: 80%;
+      }
+      .btn {
+        display: block;
+        margin: 0 auto;
+        width: 180px;
+        padding: 10px;
+      }
+      .btn-box{
+        padding-bottom: 10px;
+        transform: translateX(-10%);
+      }
+      .photo-box {
+        padding-right: 20px;
+        width: 20%;
+        max-width: 240px;
+        min-width: 200px;
+      }
+      .photo {
+        width: 100%;
+        transform: translateY(10%)
+      }
+
+
+      @media only screen and (max-width: 900px) {
+          .heading__primary {
+            flex-direction: column;
+            align-items: center;
+          }
+          .photo-box {
+            padding-right: 0;
+          }
+          .photo {
+            width: 100%;
+            transform: translateY(-10%)
+          }
+          .btn-box{
+          padding-bottom: 10px;
+          transform: translateX(0%);
+      }
       }
     </style>
 
-    <div class="jumbotron text-center">
-      <h2 class="">I'm Kristian Krusev</h2><br>
-      <p class="lead">
-            A Front-End developer specialized in HTML5, CSS3, Javascript(ES6).<br>
-            Check out some of my projects below.
-      </p><br>
-      
+    <div class="heading">
+      <div class="heading__primary">
+        <div class="heading__primary--text">
+          <h2 class="">I'm Kristian Krusev</h2><br><br>
+          <p class="lead">
+                Front-End developer specialized in HTML5, CSS3, Javascript(ES6).<br><br>
+                Check out some of my projects below.
+        </p><br>
+      </div>
+    
 
-      <a href="oldDays.html" class="btn btn-secondary">Something Casual</a>
+      <div class="photo-box">
+        <img src="./imgs/personalphoto1.png" alt="" class="photo">
+      </div>
+
+      </div>
+        <div class="btn-box">
+          <a href="oldDays.html" class="btn btn-secondary">Something Casual</a>
+        </div>
     </div>
 
 <div class="container">
