@@ -1,3 +1,20 @@
+/* 
+0-600px - phone
+600-900px - tablet portrait
+900-1200px - tablet landscape
+[1200px - 1800px] Normal styles
+Desktop first
+1800px + - big desktop
+*/
+/*
+$breakpoint argumenet choices:
+    - phone
+    - tab-port
+    - tab-land
+    - big-desktop
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -34,8 +51,19 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  /* equals to font-size: 10px; */ }
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 34%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }

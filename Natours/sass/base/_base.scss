@@ -7,8 +7,26 @@
 }
 
 html {
-    // define what 1 rem should be equal to
-    font-size: 62.5%; /* equals to font-size: 10px; */
+    // Default font size is 16px. 16px/10px = 62.5%
+    // Setting font-size to 62.5% will make 1rem = 10px
+    // So we define how many px 1 rem should be equal to.(10px)
+    font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;     // 1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;        // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(phone) {
+        font-size: 34%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;        // 1rem = 12px, 12/16 = 75%
+    }
 }
 
 body {
