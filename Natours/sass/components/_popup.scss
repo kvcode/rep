@@ -12,7 +12,6 @@
 
     &__content {
         @include absCenter;
-
         width: 85%;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
@@ -22,11 +21,30 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.3);
         transition: all .5s .3s;
+
+        @include respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            width: 98%;
+        }
     }
 
     &__left {
         width: 33.33333%;
         display: table-cell;
+
+        @include respond(tab-land) {
+            order: 2;
+            width: 100%;
+            display: flex;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     &__right {
@@ -34,11 +52,30 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-land) {
+            order: 1;
+            width: 100%;
+            padding: 2em 3rem;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
     }
 
     &__img {
-        display: block;
+        // display: block;
         width: 100%;
+
+        @include respond(phone) {
+            margin: 0 auto;
+            padding: 2px;
+            width: 35vh;
+        }
     }
     
     &__text {
@@ -56,6 +93,16 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(phone) {
+            -moz-column-count: 1;
+            -moz-column-gap: 0;
+            -moz-column-rule: none;
+    
+            column-count: 1;
+            column-gap: 0;
+            column-rule: none;
+        }
     }
 
     &:target {

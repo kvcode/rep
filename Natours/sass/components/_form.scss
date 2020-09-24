@@ -15,6 +15,11 @@
         width: 90%;
         display: block;
         transition: all .4s ease-out;
+
+        @include respond(tab-port) {
+            width: 110%;
+            transform: translateX(-5%);
+        }
         
         &:required {
             box-shadow: 0rem .5rem 1rem rgba($color-black, .1);
@@ -60,6 +65,11 @@
         width: 49%;
         display: inline-block;
 
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
 
