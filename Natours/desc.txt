@@ -1,0 +1,19 @@
+    1. Compile (watch -w) SASS to CSS
+        > npm install node-sass --save-dev
+        node-sass sass/main.scss css/style.css -w
+
+    2. Concatonate Icon font and compiled css
+        > npm install concat --save-dev
+        concat -o css/style.concat.css css/icon-font.css css/style.com.css
+    
+    3a. Install autoprefixer  > npm i autoprefixer@9.8.6 --save-dev
+    3b. Prefix CSS part of PostCSS
+        > npm install postcss --save-dev
+        > npm intall postcss-cli --save-dev
+        postcss --use autoprefixer -b css/style.concat.css -o css/style.prefix.css
+
+    4. Compress code - the package is the same as 1. (node-sass) if it is already
+    installed it doesnt need to be installed second time.
+        "compress:css": "node-sass css/style.prefix.css css/style.css output-style compressed"
+
+    

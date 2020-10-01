@@ -13,10 +13,13 @@
         top: 0;
         left: 0;
         width: 100%;
-        backface-visibility: hidden;
         border-radius: 4px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         overflow: hidden;
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
 
         &--front {
             background-color: $color-white;
