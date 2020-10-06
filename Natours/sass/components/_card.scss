@@ -198,13 +198,14 @@
     // ////////////////////////////
     ///////////////////////////////
     //////////////////////////////
-@include respond(tab-port) {
+@media only screen and (max-width: 56.25em),
+        only screen and (hover: none) {
+            
         // Functionality
-            height: auto;
-            border-radius: 4px;
-            background-color: $color-white;
-            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-
+        height: auto;
+        border-radius: 4px;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &__side {
             height: auto;
