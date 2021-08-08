@@ -6,6 +6,7 @@ const router = express.Router();
 // Param Middleware - acess to 4 vars
 router.param('id', tourController.checkId);
 
+//hub
 // Routers
 router
   .route('/') // use the root / for the defines tourRouter address
