@@ -7,36 +7,29 @@ const app = express()
 // to use middleware
 app.use(express.json())
 
-// app.get('/', (req, res) => {
-//   res.status(200).json({
-//     message: 'Hello from the server side!',
-//     app: 'natours',
-//   })
-// })
-
-// app.post('/', (req, res) => {
-//   res.send('you can post to this endpoint...')
-// })
-
 // do not read data in route handler
 const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 )
 
-//spec demain and always its version
-app.get('/api/v1/tours', (req, res) => {
+//spec dоmain and always its version
+// Handle Get request for All Tours and return JSON with all tours
+
+// Define a function to call when handling the GET ALL TOURS request
+const getAllTours = (req, res) => {
   res.status(200).json({
     status: 'success',
     results: tours.length,
     data: {
-      // name of endpoint is tourse and : tours is the name of the var that has the info
-      // tours: tours
+      // name of endpoint is tours and : tours is the name of the var that has the info
+      // so because are equal shor writing of tours: tours is just tours,
       tours,
     },
   })
-})
+}
 
-app.get('/api/v1/tours/:id/', (req, res) => {
+// Define a function to call when handling the GET TOUR request
+const getTour = (req, res) => {
   console.log(req.params)
   const id = req.params.id * 1
 
@@ -55,11 +48,11 @@ app.get('/api/v1/tours/:id/', (req, res) => {
       tour,
     },
   })
-})
+}
 
-app.post('/api/v1/tours', (req, res) => {
-  // console.log(req.body)
-
+// Defina a function to handle the POST - Create Tour
+const createTour = (req, res) => {
+  console.log(req.body)
   // take the id from last obj and add 1
 
   const newId = tours[tours.length - 1].id + 1
@@ -77,9 +70,9 @@ app.post('/api/v1/tours', (req, res) => {
     `${__dirname}/dev-data/data/tours-simple.json`,
     JSON.stringify(tours),
     (err) => {
-      // once file is written send the newly created object
+      // once file is written - send the newly created object as a response
       res
-        .status(201) //created new resoursce 201 status
+        .status(201) //means created new resoursce 201 status
         .json({
           status: 'success',
           data: {
@@ -88,14 +81,10 @@ app.post('/api/v1/tours', (req, res) => {
         })
     }
   )
+}
 
-  // DONT SEND RESPONSE TWICE
-  // res.send('done')
-})
-
-// putting for the entire object
-//patching to update properties - its easier
-app.patch('/api/v1/tours/:id', (req, res) => {
+// Define function to patch/update tour
+const updateTour = (req, res) => {
   if (req.params.id > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -108,10 +97,10 @@ app.patch('/api/v1/tours/:id', (req, res) => {
       tour: '<UPDATED TOUR HERE...>',
     },
   })
-})
+}
 
-// Deleteting requests
-app.delete('/api/v1/tours/:id', (req, res) => {
+// Define function for deleting tour
+const deleteTour = (req, res) => {
   if (req.params.id > tours.length) {
     return res.status(404).json({
       status: 'fail',
@@ -122,10 +111,28 @@ app.delete('/api/v1/tours/:id', (req, res) => {
     status: 'success',
     data: null,
   })
-})
+}
 
 const port = 3000
 
+// Start the server/listening for requests
 app.listen(port, () => {
   console.log(`app runs on port ${port}`)
 })
+
+// OLD ROUTE HANDLING with many lines
+// // Handle the GET Method and Call the Function
+// app.get('/api/v1/tours', getAllTours)
+// // Handle Get request for a single tour by the id
+// app.get('/api/v1/tours/:id/', getTour)
+// // Handle POST request to create New Tour
+// app.post('/api/v1/tours', createTour)
+// // Handle PATCH req to update properties - its easier
+// app.patch('/api/v1/tours/:id', updateTour)
+// // Handly Deleteting requests
+// app.delete('/api/v1/tours/:id', deleteTour)
+
+// BETTER ROUTE HANDLING with only two lines
+app.route('/api/v1/tours').get(getAllTours).post(createTour)
+
+app.route('/api/v1/tours/:id').get(getTour).patch(updateTour).delete(deleteTour)
