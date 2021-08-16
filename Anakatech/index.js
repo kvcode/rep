@@ -1,9 +1,7 @@
-// console.log('script loaded');
-
-// declare a var which will store json data
+// declare a var to store json data
 let apiStr;
 
-// declare a foo to return the JSON data upon inital loading
+// declare a foo to return the JSON data upon inital load
 function loadJsonData() {
   apiStr = `{
         "sucess": true,
@@ -40,7 +38,7 @@ const ratesObj = apiObj.rates;
 // define a var to store the EUR base
 const baseStr = apiObj.base;
 
-// generate array with all rates and values
+// generate two-dims array with all rates and values
 const objArr = Object.entries(ratesObj);
 
 // declare a few more vars
@@ -89,6 +87,7 @@ function displayListOfRates(el, rate) {
 // declares foo to INCREASE values with 0.0001
 let increaseRateWithOne = () => {
   let ratesClassNode = document.querySelectorAll('.rates');
+
   for (let j = 0; j < newObjArr.length; j++) {
     // delcare the current rate value and round it up to 4 decimals
     let parseNr = parseFloat(newObjArr[j][1]);
@@ -105,6 +104,8 @@ let increaseRateWithOne = () => {
       ratesClassNode[j].style.backgroundColor = 'transparent';
     }
   }
+  timesRun = timesRun + 1;
+  console.log(timesRun);
 };
 
 // declares foo to DECREASE values with 0.0001
@@ -125,6 +126,8 @@ let DecreaseRateWithOne = () => {
       ratesClassNode[k].style.backgroundColor = 'transparent';
     }
   }
+  timesRun = timesRun - 1;
+  console.log(timesRun);
 };
 
 function adjustRate() {
@@ -134,8 +137,6 @@ function adjustRate() {
 
   if (overalSwitch) {
     setFiveSecInterval = setInterval(increaseRateWithOne, fiveSecInMs);
-    timesRun = timesRun + 1;
-    console.log(timesRun);
 
     setTimeout(() => {
       clearInterval(setFiveSecInterval);
@@ -145,8 +146,6 @@ function adjustRate() {
   } else {
     setFiveSecInterval = setInterval(DecreaseRateWithOne, fiveSecInMs);
     setTimeout(() => {
-      timesRun = timesRun - 1;
-      console.log(timesRun);
       clearInterval(setFiveSecInterval);
       overalSwitch ? (overalSwitch = false) : (overalSwitch = true);
       console.log(`switch to ${overalSwitch}`);
@@ -173,7 +172,7 @@ and call it */
 /* //////////////////////// */
 
 let invokeFunctions = () => {
-  console.log(timeCheck());
+  console.log(`script started at ${timeCheck()}`);
   initialDisplay();
   adjustRate();
 
@@ -181,7 +180,7 @@ let invokeFunctions = () => {
 
   setTimeout(() => {
     clearInterval(oneMinInterval);
-    console.log(timeCheck());
+    console.log(`script ended at${timeCheck()}`);
   }, 300000);
 };
 

@@ -1,12 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 body {
-  background-color: lightblue;
+  font-family: 'Open sans', sans-serif;
+  background-color: #f4f2f2;
+}
+
+header {
+  background-color: #ccc;
+  min-height: 8vh;
 }
 
 ul {
-  text-decoration: none;
   list-style: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
 }
 
-.rates {
-  background-color: none;
+li {
+  margin-top: 0.4vh;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
+.rates_container {
+  min-width: 50%;
+  width: 80%;
+  max-width: 50rem;
+  margin: 4vh auto;
+  padding: 20px;
+  /* margin-top: 4vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 5px 10px #333;
+}
+
+.inner_rates_container {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
