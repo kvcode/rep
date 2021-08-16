@@ -32,11 +32,16 @@ ul {
 }
 
 li {
-  margin-top: 0.4vh;
+  margin-top: 1vh;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0.2rem;
+}
+
+span {
+  padding: 1px 5px;
+  border-radius: 3px;
 }
 
 .rates_container {
@@ -49,7 +54,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 5px 10px #333;
+  box-shadow: 2px 5px 10px rgb(160, 160, 160);
 }
 
 .inner_rates_container {

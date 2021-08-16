@@ -131,8 +131,8 @@ let DecreaseRateWithOne = () => {
 };
 
 function adjustRate() {
-  let fiveSecInMs = 5000;
-  let oneMinInMs = 60000;
+  let fiveSecInMs = 4990;
+  let oneMinInMs = 59980;
   let setFiveSecInterval;
 
   if (overalSwitch) {
@@ -176,7 +176,8 @@ let invokeFunctions = () => {
   initialDisplay();
   adjustRate();
 
-  let oneMinInterval = setInterval(adjustRate, 60050);
+  //   let oneMinInterval = setInterval(adjustRate, 60020);
+  let oneMinInterval = setInterval(adjustRate, 60030);
 
   setTimeout(() => {
     clearInterval(oneMinInterval);
