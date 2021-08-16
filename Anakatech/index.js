@@ -44,7 +44,7 @@ const baseStr = apiObj.base;
 let objArr = Object.entries(ratesObj);
 
 let timesRun = 0;
-let setValue = 1.0001;
+let setValue = 0.0001;
 
 // get all elements with classes rates
 
@@ -67,6 +67,8 @@ let dispRatesBtn = () => {
     displayListOfRates(strRate, nrRate);
   }
 };
+
+console.log(newObjArr);
 
 dispRatesBtn();
 
@@ -109,18 +111,14 @@ let increaseRateWithOne = () => {
     let strRate = newObjArr[j][0];
     // delcare the current rate value and round it up to 4 decimals
     let parseNr = parseFloat(newObjArr[j][1]);
-    let nrRate = (Math.round((parseNr + 0.0001) * 10000) / 10000).toFixed(4);
+    let nrRate = (Math.round((parseNr + setValue) * 10000) / 10000).toFixed(4);
     // console.log(nrRate);
     // nrRate = parseFloat(nrRate) + 0.0001;
     console.log(nrRate);
     newObjArr[j][1] = nrRate;
 
     ratesClassNode[j].innerHTML = nrRate;
-
-    newObjArr.push([strRate, nrRate]);
   }
-
-  //   console.log(newObjArr);
 };
 
 // Declare a function to decrease with one
