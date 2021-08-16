@@ -1,0 +1,11 @@
+body {
+  background-color: lightblue;
+}
+
+#rateValue {
+  background-color: red;
+}
+
+.rates {
+  background-color: none;
+}
