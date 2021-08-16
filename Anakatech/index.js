@@ -1,6 +1,6 @@
-console.log("script loaded");
+console.log('script loaded');
 
-// delcare a var to store json data
+// declare a var which will store json data
 let apiStr;
 
 // declare a foo to return the JSON data upon inital loading
@@ -30,152 +30,149 @@ function loadJsonData() {
   return apiStr;
 }
 
-// set the data load to happen on initial loading
+// set the data load to be performed on initial loading
 window.onload = loadJsonData();
 
 // parse the JSON data into object
-let apiObj = JSON.parse(apiStr);
+const apiObj = JSON.parse(apiStr);
 // define a var to store the rates object
-let ratesObj = apiObj.rates;
+const ratesObj = apiObj.rates;
 // define a var to store the EUR base
 const baseStr = apiObj.base;
 
 // generate array with all rates and values
-let objArr = Object.entries(ratesObj);
+const objArr = Object.entries(ratesObj);
 
+// declare a few more vars
 let timesRun = 0;
 let setValue = 0.0001;
-
-// get all elements with classes rates
-
-/* loop through the two-dims array manipulating the DOM
-adding List item which includes the strings for Base, Currency and rate,
-also add a span element around the rate value to easily manipulate it's
-background later on */
+let limitValue = 1.0001;
 let newObjArr = [];
+let overalSwitch = true;
 
-let dispRatesBtn = () => {
+/* Declare Foo to loop through the two-dims objArr array manipulating the DOM,
+adding List item which includes the strings for Base, Currency and rate 
+value, also add a span element around the rate value to easily manipulate
+it's background later on. Push values into new array to be used later on*/
+let initialDisplay = () => {
   for (let i = 0; i < objArr.length; i++) {
     // declare the current currency
     let strRate = objArr[i][0];
     // delcare the current rate value and round it up to 4 decimals
     let nrRate = (Math.round(objArr[i][1] * 10000) / 10000).toFixed(4);
-    // console.log(nrRate);
     newObjArr.push([strRate, nrRate]);
-
     // call display function
     displayListOfRates(strRate, nrRate);
   }
 };
 
-console.log(newObjArr);
-
-dispRatesBtn();
-
-// declare function to adjust the display over set value
-
-// Function to create list of rates with thei values
+// declare a function to create and display list of rates with their values
 function displayListOfRates(el, rate) {
-  let ratesList = document.getElementById("ratesList");
-  let rateEntry = document.createElement("li");
-  let spanEntry = document.createElement("span");
-  spanEntry.className = "rates";
+  let ratesList = document.getElementById('ratesList');
+  let rateEntry = document.createElement('li');
+  let spanEntry = document.createElement('span');
+  spanEntry.className = 'rates';
   rateEntry.appendChild(document.createTextNode(`${baseStr} / ${el} - `));
-  if (rate > setValue) {
+
+  /* set conditional statement to adjust the 
+    displayed value if lower than a set limitValue */
+  if (rate > limitValue) {
     spanEntry.appendChild(document.createTextNode(`${rate}`));
   } else {
-    spanEntry.appendChild(document.createTextNode(`${setValue}`));
+    spanEntry.appendChild(document.createTextNode(`${limitValue}`));
   }
+
   ratesList.appendChild(rateEntry);
   rateEntry.appendChild(spanEntry);
 }
 
-/* // Declare a function to increase with one
+// declares foo to INCREASE values with 0.0001
 let increaseRateWithOne = () => {
-  let ratesClassNode = document.querySelectorAll(".rates");
-  console.log((timesRun = timesRun + 1));
-  ratesClassNode.forEach((el) => {
-    let elValue = parseFloat(el.innerHTML);
-    let newValue = (Math.round((elValue + 0.0001) * 10000) / 10000).toFixed(4);
-    el.innerHTML = newValue;
-    el.style.backgroundColor = "#90ee90";
-  });
-}; */
-
-let increaseRateWithOne = () => {
-  let ratesClassNode = document.querySelectorAll(".rates");
-  console.log(newObjArr);
+  let ratesClassNode = document.querySelectorAll('.rates');
 
   for (let j = 0; j < newObjArr.length; j++) {
-    // declare the current currency
-    let strRate = newObjArr[j][0];
     // delcare the current rate value and round it up to 4 decimals
     let parseNr = parseFloat(newObjArr[j][1]);
     let nrRate = (Math.round((parseNr + setValue) * 10000) / 10000).toFixed(4);
-    // console.log(nrRate);
+
     // nrRate = parseFloat(nrRate) + 0.0001;
-    console.log(nrRate);
     newObjArr[j][1] = nrRate;
 
-    ratesClassNode[j].innerHTML = nrRate;
+    if (nrRate >= limitValue) {
+      ratesClassNode[j].innerHTML = nrRate;
+    } else {
+      ratesClassNode[j].innerHTML = limitValue;
+    }
+
+    ratesClassNode[j].style.backgroundColor = '#90ee90';
   }
 };
 
-// Declare a function to decrease with one
+// declares foo to DECREASE values with 0.0001
 let DecreaseRateWithOne = () => {
-  let ratesClassNode = document.querySelectorAll(".rates");
-  console.log((timesRun = timesRun - 1));
-  ratesClassNode.forEach((el) => {
-    let elValue = parseFloat(el.innerHTML);
-    let newValue = (Math.round((elValue - 0.0001) * 10000) / 10000).toFixed(4);
-    el.innerHTML = newValue;
-    el.style.backgroundColor = "#FF2E2E";
-  });
+  let ratesClassNode = document.querySelectorAll('.rates');
+
+  for (let k = 0; k < newObjArr.length; k++) {
+    // delcare the current rate value and round it up to 4 decimals
+    let parseNr = parseFloat(newObjArr[k][1]);
+    let nrRate = (Math.round((parseNr - setValue) * 10000) / 10000).toFixed(4);
+    // nrRate = parseFloat(nrRate) + 0.0001;
+    newObjArr[k][1] = nrRate;
+
+    if (nrRate >= limitValue) {
+      ratesClassNode[k].innerHTML = nrRate;
+    } else {
+      ratesClassNode[k].innerHTML = limitValue;
+    }
+
+    ratesClassNode[k].style.backgroundColor = '#FF2E2E';
+  }
 };
-
-// let bckgChng = document.querySelectorAll("rates");
-// console.log(bckgChng);
-// bckgChng.forEach()
-
-let overalSwitch = true;
 
 function adjustRate() {
   if (overalSwitch) {
-    // bckgChng.style.background = "green";
     let setFiveSecInterval = setInterval(increaseRateWithOne, 500);
 
-    // function logTimesRunInc() {
-    //   console.log((timesRun = timesRun + 1));
-    // }
-    console.log((timesRun = timesRun + 1));
-
     setTimeout(() => {
       clearInterval(setFiveSecInterval);
-      console.log(`timed at 12`);
+      console.log(`timed at`);
       overalSwitch ? (overalSwitch = false) : (overalSwitch = true);
-      console.log(overalSwitch);
+      console.log(`switch to ${overalSwitch}`);
     }, 5950);
   } else {
-    // bckgChng.style.background = "red";
     let setFiveSecInterval = setInterval(DecreaseRateWithOne, 500);
-
-    // function logTimesRun() {
-    //   console.log((timesRun = timesRun - 1));
-    // }
-    console.log((timesRun = timesRun - 1));
 
     setTimeout(() => {
       clearInterval(setFiveSecInterval);
-      console.log(`timed at 12`);
+      console.log(`timed at`);
       overalSwitch ? (overalSwitch = false) : (overalSwitch = true);
-      console.log(overalSwitch);
+      console.log(`switch to ${overalSwitch}`);
     }, 5950);
   }
 }
 
+/* //////////////// */
+// Invoke functions //
+/* //////////////// */
+
+// initialDisplay();
+
 // adjustRate();
+
 // let oneMinInterval = setInterval(adjustRate, 6050);
 
 // setTimeout(() => {
 //   clearInterval(oneMinInterval);
 // }, 30000);
+
+// declare a foo to invoke all other foos upon butt click
+let btnClckFoo = () => {
+  initialDisplay();
+  adjustRate();
+
+  let oneMinInterval = setInterval(adjustRate, 6050);
+
+  setTimeout(() => {
+    clearInterval(oneMinInterval);
+  }, 30000);
+};
