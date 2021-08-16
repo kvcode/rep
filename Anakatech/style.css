@@ -2,8 +2,9 @@ body {
   background-color: lightblue;
 }
 
-#rateValue {
-  background-color: red;
+ul {
+  text-decoration: none;
+  list-style: none;
 }
 
 .rates {

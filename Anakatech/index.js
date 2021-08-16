@@ -1,4 +1,4 @@
-console.log('script loaded');
+// console.log('script loaded');
 
 // declare a var which will store json data
 let apiStr;
@@ -89,7 +89,6 @@ function displayListOfRates(el, rate) {
 // declares foo to INCREASE values with 0.0001
 let increaseRateWithOne = () => {
   let ratesClassNode = document.querySelectorAll('.rates');
-
   for (let j = 0; j < newObjArr.length; j++) {
     // delcare the current rate value and round it up to 4 decimals
     let parseNr = parseFloat(newObjArr[j][1]);
@@ -98,20 +97,19 @@ let increaseRateWithOne = () => {
     // nrRate = parseFloat(nrRate) + 0.0001;
     newObjArr[j][1] = nrRate;
 
-    if (nrRate >= limitValue) {
+    if (nrRate > limitValue) {
       ratesClassNode[j].innerHTML = nrRate;
+      ratesClassNode[j].style.backgroundColor = '#90ee90';
     } else {
       ratesClassNode[j].innerHTML = limitValue;
+      ratesClassNode[j].style.backgroundColor = 'transparent';
     }
-
-    ratesClassNode[j].style.backgroundColor = '#90ee90';
   }
 };
 
 // declares foo to DECREASE values with 0.0001
 let DecreaseRateWithOne = () => {
   let ratesClassNode = document.querySelectorAll('.rates');
-
   for (let k = 0; k < newObjArr.length; k++) {
     // delcare the current rate value and round it up to 4 decimals
     let parseNr = parseFloat(newObjArr[k][1]);
@@ -119,60 +117,72 @@ let DecreaseRateWithOne = () => {
     // nrRate = parseFloat(nrRate) + 0.0001;
     newObjArr[k][1] = nrRate;
 
-    if (nrRate >= limitValue) {
+    if (nrRate > limitValue) {
       ratesClassNode[k].innerHTML = nrRate;
+      ratesClassNode[k].style.backgroundColor = '#FF2E2E';
     } else {
       ratesClassNode[k].innerHTML = limitValue;
+      ratesClassNode[k].style.backgroundColor = 'transparent';
     }
-
-    ratesClassNode[k].style.backgroundColor = '#FF2E2E';
   }
 };
 
 function adjustRate() {
+  let fiveSecInMs = 4990;
+  let oneMinInMs = 59980;
+  let setFiveSecInterval;
+
   if (overalSwitch) {
-    let setFiveSecInterval = setInterval(increaseRateWithOne, 500);
+    setFiveSecInterval = setInterval(increaseRateWithOne, fiveSecInMs);
+    timesRun = timesRun + 1;
+    console.log(timesRun);
 
     setTimeout(() => {
       clearInterval(setFiveSecInterval);
-      console.log(`timed at`);
       overalSwitch ? (overalSwitch = false) : (overalSwitch = true);
       console.log(`switch to ${overalSwitch}`);
-    }, 5950);
+    }, oneMinInMs);
   } else {
-    let setFiveSecInterval = setInterval(DecreaseRateWithOne, 500);
-
+    setFiveSecInterval = setInterval(DecreaseRateWithOne, fiveSecInMs);
     setTimeout(() => {
+      timesRun = timesRun - 1;
+      console.log(timesRun);
       clearInterval(setFiveSecInterval);
-      console.log(`timed at`);
       overalSwitch ? (overalSwitch = false) : (overalSwitch = true);
       console.log(`switch to ${overalSwitch}`);
-    }, 5950);
+    }, oneMinInMs);
   }
 }
 
-/* //////////////// */
-// Invoke functions //
-/* //////////////// */
+// declare function to log in console date and time to check runtimes
+let timeCheck = () => {
+  let today = new Date();
+  let date =
+    today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+  let time =
+    today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds();
+  let dateTime = date + ' ' + time;
 
-// initialDisplay();
+  return dateTime;
+};
 
-// adjustRate();
+/* //////////////////////// */
+/* Define a function which 
+invokes all other functions
+and call it */
+/* //////////////////////// */
 
-// let oneMinInterval = setInterval(adjustRate, 6050);
-
-// setTimeout(() => {
-//   clearInterval(oneMinInterval);
-// }, 30000);
-
-// declare a foo to invoke all other foos upon butt click
-let btnClckFoo = () => {
+let invokeFunctions = () => {
+  console.log(timeCheck());
   initialDisplay();
   adjustRate();
 
-  let oneMinInterval = setInterval(adjustRate, 6050);
+  let oneMinInterval = setInterval(adjustRate, 60020);
 
   setTimeout(() => {
     clearInterval(oneMinInterval);
-  }, 30000);
+    console.log(timeCheck());
+  }, 300000);
 };
+
+invokeFunctions();
