@@ -48,8 +48,8 @@ let limitValue = 1.0001;
 let newObjArr = [];
 let overalSwitch = true;
 
-/* Declare Foo to loop through the two-dims objArr array manipulating the DOM,
-adding List item which includes the strings for Base, Currency and rate 
+/* Declare Foo to loop through the two-dims objArr manipulating the DOM,
+adding List items which include the strings for Base, Currency and rate 
 value, also add a span element around the rate value to easily manipulate
 it's background later on. Push values into new array to be used later on*/
 let initialDisplay = () => {
@@ -104,12 +104,12 @@ let increaseRateWithOne = () => {
       ratesClassNode[j].style.backgroundColor = 'transparent';
     }
   }
-  timesRun = timesRun + 1;
-  console.log(timesRun);
+//   timesRun = timesRun + 1;
+//   console.log(timesRun);
 };
 
 // declares foo to DECREASE values with 0.0001
-let DecreaseRateWithOne = () => {
+let decreaseRateWithOne = () => {
   let ratesClassNode = document.querySelectorAll('.rates');
   for (let k = 0; k < newObjArr.length; k++) {
     // delcare the current rate value and round it up to 4 decimals
@@ -126,13 +126,13 @@ let DecreaseRateWithOne = () => {
       ratesClassNode[k].style.backgroundColor = 'transparent';
     }
   }
-  timesRun = timesRun - 1;
-  console.log(timesRun);
+//   timesRun = timesRun - 1;
+//   console.log(timesRun);
 };
 
 function adjustRate() {
-  let fiveSecInMs = 4990;
-  let oneMinInMs = 59980;
+  let fiveSecInMs = 4995;
+  let oneMinInMs = 60000;
   let setFiveSecInterval;
 
   if (overalSwitch) {
@@ -144,7 +144,8 @@ function adjustRate() {
       console.log(`switch to ${overalSwitch}`);
     }, oneMinInMs);
   } else {
-    setFiveSecInterval = setInterval(DecreaseRateWithOne, fiveSecInMs);
+    setFiveSecInterval = setInterval(decreaseRateWithOne, fiveSecInMs);
+
     setTimeout(() => {
       clearInterval(setFiveSecInterval);
       overalSwitch ? (overalSwitch = false) : (overalSwitch = true);
@@ -153,7 +154,7 @@ function adjustRate() {
   }
 }
 
-// declare function to log in console date and time to check runtimes
+// optional foo to check runtimes
 let timeCheck = () => {
   let today = new Date();
   let date =
@@ -172,16 +173,15 @@ and call it */
 /* //////////////////////// */
 
 let invokeFunctions = () => {
-  console.log(`script started at ${timeCheck()}`);
+//   console.log(`script started at ${timeCheck()}`);
   initialDisplay();
   adjustRate();
 
-  //   let oneMinInterval = setInterval(adjustRate, 60020);
-  let oneMinInterval = setInterval(adjustRate, 60030);
+  let oneMinInterval = setInterval(adjustRate, 60050);
 
   setTimeout(() => {
     clearInterval(oneMinInterval);
-    console.log(`script at 5min ${timeCheck()}`);
+    // console.log(`script at 5min ${timeCheck()}`);
   }, 300000);
 };
 
