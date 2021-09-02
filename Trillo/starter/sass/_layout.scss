@@ -1,5 +1,10 @@
 .container {
-  max-width: 120rem;
+  max-width: 196rem; // max full HD Res 1960px width
+
+  // min desktop View width 1180px
+  // set Media queries and breakpoints for less
+  min-width: 118rem;
+
   margin: 4rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
@@ -31,7 +36,7 @@
 .hotel-view {
   background-color: #fff;
   // background-color: coral;
-  min-height: 80vh;
+  // min-height: 80vh;
 
   flex: 1;
 }
@@ -41,17 +46,19 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
-  height: 400px;
+  // height: 400px;
 }
 
 .description {
+  font-size: 1.4rem;
   background-color: #fff;
   box-shadow: var(--shadow-light);
   flex: 0 0 60%; //  grow = 0 dont grow, flex shrink = 0 dont shrink
   margin-right: 4.5rem;
+  padding: 3rem;
 }
 
 .user-reviews {
-  background-color: yellowgreen;
+  background-color: lightgoldenrodyellow;
   flex: 1; // fill in the remaining space
 }
