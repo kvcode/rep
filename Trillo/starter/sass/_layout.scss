@@ -59,4 +59,7 @@
 
 .user-reviews {
   flex: 1; // fill in the remaining space
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
