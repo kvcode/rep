@@ -385,7 +385,7 @@ body {
   cursor: pointer; }
   @media only screen and (max-width: 30.75em) {
     .btn-inline {
-      font-size: 0.6rem; } }
+      font-size: 0.8rem; } }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
     .btn-inline:hover span {
