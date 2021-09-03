@@ -36,6 +36,7 @@ Grey dark 3: #999
   --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-huge: 100em; //1200px
 $bp-largest: 75em; //1200px
 $bp-large: 70em; //1120px
 $bp-medium: 57.5em; //920px
@@ -58,6 +59,10 @@ html {
   font-size: 62.5%; //1 rem = 10px because 10px/16 defualtpx = 62.5%
   @media only screen and (max-width: $bp-large) {
     font-size: 50%;
+  }
+
+  @media only screen and (min-width: $bp-huge) {
+    font-size: 80%;
   }
 }
 
