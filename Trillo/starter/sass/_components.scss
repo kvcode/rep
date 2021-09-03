@@ -268,6 +268,12 @@
       letter-spacing: 0px;
       font-weight: 600;
     }
+    @media only screen and (max-width: $bp-microscopic) {
+      font-size: 1.4rem;
+      padding: 1rem 0.4rem;
+      letter-spacing: 0px;
+      font-weight: 600;
+    }
   }
   &__stars {
     margin-right: auto;
@@ -278,6 +284,9 @@
     }
     @media only screen and (max-width: $bp-tiny) {
       transform: scale(0.8);
+    }
+    @media only screen and (max-width: $bp-microscopic) {
+      transform: scale(0.75);
     }
   }
 
@@ -338,8 +347,12 @@
     text-transform: uppercase;
 
     @media only screen and (max-width: $bp-small) {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
       margin-top: 0.4rem;
+    }
+    @media only screen and (max-width: $bp-tiny) {
+      font-size: 0.4rem;
+      margin-top: 0.2rem;
     }
   }
 }
