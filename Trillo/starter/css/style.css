@@ -27,7 +27,7 @@ Grey dark 3: #999
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --shadow-dark: 0 2rem 5rem rgba(0, 0, 0, 0.6);
-  --shadow-light: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 6rem rgba(0, 0, 0, 0.2);
   --line: 1px solid var(--color-grey-light-2); }
 
 * {
@@ -364,13 +364,14 @@ body {
         font-size: 1.8rem; } }
     @media only screen and (max-width: 30.75em) {
       .overview__rating-average {
-        font-size: 1.4rem; } }
+        font-size: 1.2rem; } }
   .overview__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase; }
     @media only screen and (max-width: 39.5em) {
       .overview__rating-count {
-        font-size: 0.6rem; } }
+        font-size: 0.5rem;
+        margin-top: 0.4rem; } }
 
 .btn-inline {
   border: none;
@@ -382,6 +383,9 @@ body {
   background-color: transparent;
   transition: all 0.2s;
   cursor: pointer; }
+  @media only screen and (max-width: 30.75em) {
+    .btn-inline {
+      font-size: 0.6rem; } }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
     .btn-inline:hover span {
@@ -464,7 +468,7 @@ body {
 
 .review {
   background-color: #fff;
-  box-shadow: var(--line);
+  box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative;
@@ -472,7 +476,8 @@ body {
   @media only screen and (max-width: 57.5em) {
     .review {
       padding: 1.2rem 1rem;
-      margin-bottom: 0.75rem; } }
+      margin-bottom: 0.75rem;
+      width: 100%; } }
   .review__text {
     margin-bottom: 2rem;
     position: relative;
@@ -499,6 +504,9 @@ body {
     color: var(--color-primary);
     font-size: 2.2rem;
     font-weight: 300; }
+    @media only screen and (max-width: 30.75em) {
+      .review__rating {
+        font-size: 1.8rem; } }
   .review::before {
     content: '\201C';
     position: absolute;
@@ -518,6 +526,10 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 30.75em) {
+      .cta__book-now {
+        font-size: 1.4rem;
+        margin-bottom: 1.4rem; } }
   @media only screen and (max-width: 57.5em) {
     .cta {
       padding: 2rem 0; } }
@@ -533,6 +545,10 @@ body {
   cursor: pointer;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 57.5em) {
+    .btn {
+      font-size: 1.2rem;
+      font-weight: 600; } }
   .btn > * {
     display: inline-block;
     height: 100%;
@@ -540,11 +556,17 @@ body {
     transition: all 0.3s; }
   .btn__visible {
     padding: 2rem 7.5rem; }
+    @media only screen and (max-width: 57.5em) {
+      .btn__visible {
+        padding: 1.5rem 4rem; } }
   .btn__invisible {
     position: absolute;
     padding: 2rem 0rem;
     left: 0;
     top: -100%; }
+    @media only screen and (max-width: 57.5em) {
+      .btn__invisible {
+        padding: 1.5rem 0rem; } }
   .btn:hover {
     background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark)); }
   .btn:hover .btn__visible {
