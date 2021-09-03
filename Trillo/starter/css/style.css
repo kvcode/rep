@@ -41,8 +41,7 @@ Grey dark 3: #999
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-  min-width: 359px; }
+  font-size: 62.5%; }
   @media only screen and (max-width: 70em) {
     html {
       font-size: 50%; } }
@@ -148,7 +147,8 @@ body {
     .search {
       order: 1;
       flex: 0 0 100%;
-      background-color: var(--color-grey-light-2); } }
+      background-color: var(--color-grey-light-2);
+      min-height: 4rem; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -316,8 +316,8 @@ body {
         padding: 1rem 1.5rem; } }
     @media only screen and (max-width: 30.75em) {
       .overview__heading {
-        font-size: 1.8rem;
-        padding: 1rem 1rem;
+        font-size: 1.6rem;
+        padding: 1rem 0.5rem;
         letter-spacing: 0px; } }
   .overview__stars {
     margin-right: auto;
@@ -340,7 +340,7 @@ body {
     vertical-align: center; }
     @media only screen and (max-width: 30.75em) {
       .overview__location {
-        font-size: 1rem; } }
+        font-size: 0.8rem; } }
   .overview__rating {
     background-color: var(--color-primary);
     color: #fff;
@@ -353,8 +353,8 @@ body {
     flex-direction: column; }
     @media only screen and (max-width: 39.5em) {
       .overview__rating {
-        padding: 0rem 1.25rem;
-        margin-left: 1.5rem; } }
+        padding: 0rem 1rem;
+        margin-left: 0.8rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
@@ -364,7 +364,7 @@ body {
         font-size: 1.8rem; } }
     @media only screen and (max-width: 30.75em) {
       .overview__rating-average {
-        font-size: 1.6rem; } }
+        font-size: 1.4rem; } }
   .overview__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase; }

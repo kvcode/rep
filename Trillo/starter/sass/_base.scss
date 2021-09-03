@@ -56,8 +56,6 @@ $bp-tiny: 30.75em; //492px
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1 rem = 10px because 10px/16 defualtpx = 62.5%
-  min-width: 359px; //setting min width for the final media query
-  // min-width: 118rem; //needed to avoid white space when scrolling on Y axis
   @media only screen and (max-width: $bp-large) {
     font-size: 50%;
   }
