@@ -50,6 +50,7 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1 rem = 10px because 10px/16 defualtpx = 62.5%
+  min-width: 118rem; //needed to avoid white space when scrolling on Y axis
 }
 
 body {
@@ -64,6 +65,6 @@ body {
   );
   background-size: cover;
   background-repeat: no-repeat;
-
   min-height: 100vh;
+  // min-width: 118rem;
 }
