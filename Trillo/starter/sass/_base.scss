@@ -36,6 +36,12 @@ Grey dark 3: #999
   --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; //1200px
+$bp-large: 70em; //1120px
+$bp-medium: 57.5em; //920px
+$bp-small: 39.5em; //632px
+$bp-tiny: 30.75em; //492px
+
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +56,11 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1 rem = 10px because 10px/16 defualtpx = 62.5%
-  min-width: 118rem; //needed to avoid white space when scrolling on Y axis
+  min-width: 359px; //setting min width for the final media query
+  // min-width: 118rem; //needed to avoid white space when scrolling on Y axis
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -65,6 +75,6 @@ body {
   );
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 97vh;
   // min-width: 118rem;
 }

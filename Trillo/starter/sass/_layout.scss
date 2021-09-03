@@ -1,13 +1,19 @@
 .container {
-  max-width: 196rem; // max full HD Res 1960px width
+  // max-width: 196rem; // max full HD Res 1960px width
+  max-width: 120rem;
 
   // min desktop View width 1180px
   // set Media queries and breakpoints for less
-  min-width: 118rem;
-
+  // min-width: 118rem;
   margin: 5rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
+
+  @media only screen and (max-width: $bp-largest) {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .header {
@@ -18,10 +24,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-tiny) {
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    height: 12rem;
+    align-content: space-around;
+  }
 }
 
 .content {
   display: flex;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -47,6 +64,14 @@
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
   font-size: 1.4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1.5rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+    padding: 2.5rem;
+  }
 }
 
 .description {
@@ -55,6 +80,16 @@
   flex: 0 0 60%; //  grow = 0 dont grow, flex shrink = 0 dont shrink
   margin-right: 4.5rem;
   padding: 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1.2rem 1rem;
+    margin-right: 1rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .user-reviews {
