@@ -19,7 +19,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: minmax(max-content, 80vh) min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 62.5em) {
     .container {
@@ -27,10 +27,10 @@ body {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 6rem calc(100vh - 6rem); } }
+      grid-template-rows: 6rem minmax(min-content, calc(96vh - 5rem)); } }
   @media only screen and (max-width: 37.5em) {
     .container {
-      grid-template-rows: 4rem minmax(min-content, calc(98vh - 5rem)) minmax(min-content, calc(40vh - 2rem)); } }
+      grid-template-rows: 4rem minmax(min-content, calc(96vh - 5rem)) minmax(min-content, calc(40vh - 2rem)); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;

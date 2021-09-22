@@ -45,7 +45,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: minmax(max-content, 80vh) min-content 40vw repeat(
+      3,
+      min-content
+    );
   // 8rem fixed header 2x1fr fullbleed sections
   // 8 cols partially responsive with min width of their min content and max width of 140px
   grid-template-columns:
@@ -65,11 +68,11 @@ body {
   }
 
   @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 6rem calc(100vh - 6rem);
+    grid-template-rows: 6rem minmax(min-content, calc(96vh - 5rem));
   }
 
   @media only screen and (max-width: $bp-small) {
-    grid-template-rows: 4rem minmax(min-content, calc(98vh - 5rem)) minmax(
+    grid-template-rows: 4rem minmax(min-content, calc(96vh - 5rem)) minmax(
         min-content,
         calc(40vh - 2rem)
       );
