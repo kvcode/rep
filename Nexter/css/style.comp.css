@@ -30,7 +30,7 @@ body {
       grid-template-rows: 6rem calc(100vh - 6rem); } }
   @media only screen and (max-width: 37.5em) {
     .container {
-      grid-template-rows: 6rem calc(60vh - 3rem) calc(40vh - 3rem); } }
+      grid-template-rows: 4rem minmax(min-content, calc(60vh - 2rem)) minmax(min-content, calc(40vh - 2rem)); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -114,14 +114,26 @@ body {
     width: 3.5rem;
     content: "";
     display: block; }
+    @media only screen and (max-width: 37.5em) {
+      .nav-btn::before, .nav-btn::after {
+        width: 3rem; } }
   .nav-btn::before {
     transform: translateY(-1rem); }
+    @media only screen and (max-width: 37.5em) {
+      .nav-btn::before {
+        transform: translateY(-0.8rem); } }
   .nav-btn::after {
     transform: translateY(0.8rem); }
+    @media only screen and (max-width: 37.5em) {
+      .nav-btn::after {
+        transform: translateY(0.6rem); } }
   @media only screen and (max-width: 62.5em) {
     .nav-btn {
       margin-top: 0;
       margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav-btn {
+      width: 3rem; } }
 
 .header {
   background-color: #54483a;
@@ -140,7 +152,8 @@ body {
       grid-column: 1/-1; } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      padding: 3.2rem; } }
+      padding: 2rem 3rem;
+      gap: 2rem 0; } }
   .header__logo {
     height: 3rem;
     justify-self: center; }
@@ -181,7 +194,8 @@ body {
   justify-items: center; }
   @media only screen and (max-width: 50em) {
     .realtors {
-      grid-column: 1/-1; } }
+      grid-column: 1/-1;
+      padding: 2.2rem; } }
   .realtors__list {
     display: grid;
     grid-template-columns: min-content max-content;
@@ -192,7 +206,8 @@ body {
         grid-template-columns: repeat(3, min-content max-content); } }
     @media only screen and (max-width: 37.5em) {
       .realtors__list {
-        grid-template-columns: min-content max-content; } }
+        grid-template-columns: min-content max-content;
+        gap: 3vh 2rem; } }
   .realtors__img {
     width: 7rem;
     border-radius: 50%;
