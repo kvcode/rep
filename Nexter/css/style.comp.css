@@ -30,7 +30,7 @@ body {
       grid-template-rows: 6rem calc(100vh - 6rem); } }
   @media only screen and (max-width: 37.5em) {
     .container {
-      grid-template-rows: 4rem minmax(min-content, calc(60vh - 2rem)) minmax(min-content, calc(40vh - 2rem)); } }
+      grid-template-rows: 4rem minmax(min-content, calc(98vh - 5rem)) minmax(min-content, calc(40vh - 2rem)); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -152,8 +152,7 @@ body {
       grid-column: 1/-1; } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      padding: 2rem 3rem;
-      gap: 2rem 0; } }
+      padding: 2rem 3rem; } }
   .header__logo {
     height: 3rem;
     justify-self: center; }
@@ -224,6 +223,10 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 6rem;
   align-items: start; }
+  @media only screen and (max-width: 37.5em) {
+    .features {
+      margin: 5rem 0;
+      gap: 5rem 0rem; } }
 
 .feature {
   display: grid;
@@ -298,6 +301,10 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem; }
+  @media only screen and (max-width: 37.5em) {
+    .homes {
+      margin: 6rem 0;
+      gap: 6rem 0rem; } }
 
 .home {
   background-color: #f9f7f6;

@@ -69,6 +69,11 @@ body {
   }
 
   @media only screen and (max-width: $bp-small) {
-    grid-template-rows: 6rem calc(60vh - 3rem) calc(40vh - 3rem);
+    grid-template-rows: 4rem minmax(min-content, calc(98vh - 5rem)) minmax(
+        min-content,
+        calc(40vh - 2rem)
+      );
+
+    // grid-template-rows: 5rem minmax(min-content, calc(98vh - 5rem));
   }
 }

@@ -12,6 +12,7 @@
 
   @media only screen and (max-width: $bp-medium) {
     grid-column: 1/-1;
+    padding: 2.2rem;
   }
 
   &__list {
@@ -27,6 +28,7 @@
 
     @media only screen and (max-width: $bp-small) {
       grid-template-columns: min-content max-content;
+      gap: 3vh 2rem;
     }
   }
 
