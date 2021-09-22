@@ -27,10 +27,10 @@ body {
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
   @media only screen and (max-width: 50em) {
     .container {
-      grid-template-rows: 6rem minmax(min-content, calc(96vh - 5rem)); } }
+      grid-template-rows: 6rem minmax(min-content, calc(85vh - 6rem)) max-content; } }
   @media only screen and (max-width: 37.5em) {
     .container {
-      grid-template-rows: 4rem minmax(min-content, calc(96vh - 5rem)) minmax(min-content, calc(40vh - 2rem)); } }
+      grid-template-rows: 4rem minmax(min-content, calc(75vh - 4rem)) minmax(min-content, 30vh); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -152,7 +152,8 @@ body {
       grid-column: 1/-1; } }
   @media only screen and (max-width: 37.5em) {
     .header {
-      padding: 2rem 3rem; } }
+      padding: 2rem 3rem;
+      gap: 3rem 0; } }
   .header__logo {
     height: 3rem;
     justify-self: center; }
