@@ -40,6 +40,10 @@
     <meta name="msapplication-config" content="./imgs/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+
   </head>
 
   <body>
@@ -117,17 +121,50 @@
           text-align: center;
           }
       }
+
+      .heading__primary--text {
+        display: flex;
+        flex-direction: column
+        ;
+        text-align: center;
+      }
+
+      .heading__primary--text h2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 2.6rem;
+        letter-spacing: .05em;
+      }
+
+      .heading__primary--text p {
+        font-weight: 500;
+        margin-bottom: 2rem;
+        line-height: 2rem;
+        font-family: 'Montserrat', sans-serif;
+
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card-body p {
+        padding: 1rem 0rem;
+      }
+
     </style>
 
 <div class="bg_header">
     <div class="heading">
       <div class="heading__primary">
         <div class="heading__primary--text">
-          <h2 class="">I'm Kristian Krusev</h2>
+          <h2 class="">I am Kristian Krusev</h2>
           <p class="lead">
-                I am a Front-End developer working mainly with HTML5, CSS3(SCSS), JavaScript(ES5,ES6).<br>
-                I am also using tools like: verson control platforms such as GitHub, variety of npm Packages, code compilers and preprocessors.<br>
-                Check out some of the projects I've worked on below.
+                Front-End developer working with  HTML5(BEM),<br> CSS3(SCSS), JavaScript(ES5,ES6).<br>
+                Main tools I use - VSCode, GitHub, NPM.<br>
+                Check out some of the things I've worked on below.
         </p><br>
       </div>
       
@@ -156,7 +193,7 @@
                 Luxury home - your own home!
                 HTML BEM Markup with SASS/SCSS. Mid-complexity Grid layout delivering great responsiveness.
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/Nexter" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/Nexter" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
@@ -170,7 +207,7 @@
                 Find deals on hotels, flights, and more...
                 HTML BEM Markup with SASS/SCSS. Flexbox layout bringing great responsiveness.
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/Trillo/starter" id="sourceBtn" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/Trillo/starter" id="sourceBtn" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
@@ -184,7 +221,7 @@
                  Take on adventure-filled tour! <br>
                  HTML BEM Markup with SASS/SCSS - this project utilizes a huge variety of CSS3 features.
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/Natours/" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/Natours/" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
@@ -197,7 +234,7 @@
               <p class="card-text">
                 Find recipes, create shopping lists, save your favorites.
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/forkify/dist" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/forkify/dist" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
@@ -210,7 +247,7 @@
               <p class="card-text">
                 Budgety App - manage your wealth.
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/budgety" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/budgety" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
@@ -223,7 +260,7 @@
               <p class="card-text">
                  Minimalist panels powered by Vue.js. See it in action by registering and logging in.
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/LogInVueJS_1" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/LogInVueJS_1" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
@@ -236,7 +273,7 @@
               <p class="card-text">
                 A game thats both, fun and easy to play. Don't roll a one though.
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/zarcheta" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/zarcheta" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
@@ -262,7 +299,7 @@
               <p class="card-text">
                 Increase every 5 sec with 0.0001 pip for a minute and then decrease for one minute, stop the inc/dec after 5 min. 
               </p>
-              <a href="https://github.com/kvcode/rep/tree/master/Anakatech" class="btn btn-outline-success btn-sm">Source Code</a>
+              <a href="https://github.com/kvcode/rep/tree/master/Anakatech" class="btn btn-outline-success btn-sm">Resources</a>
             </div>
           </div>
         </div>
